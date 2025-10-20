@@ -103,6 +103,12 @@ try:
         )
         print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
 
+        # --- Guardar copia local del modelo para validación ---
+        import joblib
+        model_path = os.path.join(workspace_dir, "model.pkl")
+        joblib.dump(model, model_path)
+        print(f"--- Modelo guardado localmente en: {model_path} ---")
+
 except Exception as e:
     print(f"\n--- ERROR durante la ejecución de MLflow ---")
     traceback.print_exc()
