@@ -2,4 +2,4 @@
 train:
 	python train.py  
 validate:
-	python validate.py 
+	python validate-1.py 
